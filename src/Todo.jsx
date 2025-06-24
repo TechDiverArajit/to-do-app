@@ -119,7 +119,7 @@ const Todo = ()=>{
                                 {ele.importanceLevel}
                             </h6>
                             <div onClick={()=>deleteTask(idx)}  className="delete">
-                                <img src="./dist/assets/delete.png" width={24} alt="" />
+                                <img src="./public/delete.png" width={24} alt="" />
                             </div>
                             
                             </div>
