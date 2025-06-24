@@ -121,10 +121,7 @@ const Todo = ()=>{
                             <div onClick={()=>deleteTask(idx)}  className="delete">
                                 <img src="./public/delete.png" width={24} alt="" />
                             </div>
-                            
                             </div>
-                        
-                             
                             )}
                         
                         
