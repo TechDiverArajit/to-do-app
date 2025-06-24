@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  font-family: "Outfit", sans-serif;
+}
+body{
+  overflow-x: hidden;
+  background-image: url(assets/v904-nunny-012.jpg);
+  background-size: cover;
+}
+
+
+.container{
+  width:850px;
+  min-height: 200px;
+  box-shadow: 5px 5px 5px rgb(0, 0, 0);
+  border-radius: 20px;
+  position: relative;
+  left: 27%;
+  
+  padding: 20px;
+  margin-top: 80px;
+  
+  backdrop-filter: blur(10px);
+  
+}
+
+@media screen and (max-width: 600px) {
+  .container{
+    width: 400px; /* The width is 100%, when the viewport is 800px or smaller */
+    left: 20px;
+  }
+}
+@media screen and (max-width: 600px) {
+  #addinput{
+    width: 100px; /* The width is 100%, when the viewport is 800px or smaller */
+    
+  }
+}
+
+h1{
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 5px;
+  font-size: 40px;
+  color: rgb(0, 0, 0);
+  text-shadow: 2px 2px gray;
+}
+p{
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 0 0 20px 0 ;
+  color: #000000;
+}
+.addtask{
+  display: flex;
+  gap: 20px;
+}
+
+#addinput{
+  min-width: 300px;
+  height: 40px;
+  border: none;
+  outline: none;
+  background-color: rgb(255, 255, 255);
+  border-radius: 30px;
+  font-size: 20px;
+  padding-left: 30px;
+  box-shadow: 5px 5px 5px gray;
+  position: relative;
+}
+
+#date{
+  width: 150px;
+  height: 40px;
+  font-size: 20px;
+  border:none;
+  background-color: rgb(255, 255, 255);
+  outline: none;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px gray;
+}
+.difficultyLevel{
+  width: 100px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 5px 5px 5px gray;
+  font-size: 18px;
+  border: none;
+  outline: none;
+}
+
+button{
+  height: 40px;
+  width: 120px;
+  position: absolute;
+  right: 100px;
+  font-weight: 900;
+  border-radius: 300px;
+  box-shadow: 5px 5px 5px gray;
+  border: none;
+  top: 46px;
+  background-color: chartreuse;
+  
+
+}
+
+
+.listItem{
+  position: relative;
+}
+
+.list{
+  margin: 10px;
+  padding: 10px;
+  position: relative;
+
+}
+h5{
+  position: absolute;
+  right: 80px;
+  top: 10px;
+  font-size: 16px;
+}
+
+h5::before{
+  content: '';
+  width: 25px;
+  height: 25px;
+  background-image: url(assets/sand-clock.png);
+  background-size: cover;
+  position: absolute;
+  left: -30px;
+}
+
+.list li{
+  margin:10px;
+  list-style: none;
+  font-weight: 700;
+  font-size: 22px;
+  user-select: none;
+  border-radius: 20px;
+  max-width: 600px;
+  word-wrap: break-word;
+  
+}
+/* .list li:hover{
+
+} */
+
+.delete{
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  right: 20px;
+  top: 0px;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+.delete:hover{
+
+  background-color: rgb(199, 202, 202);
+}
+
+
+
+.high{
+  color: red;
+}
+.medium{
+  color: rgb(202, 202, 96);
+  
+}
+.low{
+  color: rgb(90, 103, 70);
+}
+
+.list li::before{
+  content: '';
+  width:28px;
+  height: 28px;
+  position: absolute;
+  background-image: url(assets/unchecked.png);
+  background-size: cover;
+  left: -20px;
+  
+}
+
+.list li.checked::before{
+  content: '';
+  background-image: url(assets/checked.png);
+
+}
+.list li.checked{
+  text-decoration: line-through;
+}
+
+
+
+
