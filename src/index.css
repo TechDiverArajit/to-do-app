@@ -14,30 +14,17 @@ body{
 .container{
   width:850px;
   min-height: 200px;
-  box-shadow: 5px 5px 5px rgb(0, 0, 0);
+  box-shadow: 5px 5px 5px rgb(48, 47, 47);
   border-radius: 20px;
   position: relative;
   left: 27%;
-  
   padding: 20px;
   margin-top: 80px;
-  
   backdrop-filter: blur(10px);
   
 }
 
-@media screen and (max-width: 600px) {
-  .container{
-    width: 400px; /* The width is 100%, when the viewport is 800px or smaller */
-    left: 20px;
-  }
-}
-@media screen and (max-width: 600px) {
-  #addinput{
-    width: 100px; /* The width is 100%, when the viewport is 800px or smaller */
-    
-  }
-}
+
 
 h1{
   text-align: center;
@@ -156,7 +143,6 @@ h5::before{
   position: absolute;
   right: 20px;
   top: 0px;
-  
   display: flex;
   justify-content: center;
   align-items: center;
@@ -200,6 +186,67 @@ h5::before{
   text-decoration: line-through;
 }
 
+/* phone*/
+@media (max-width : 600px){
+  
+  .addtask{
+    flex-direction: column;
+  }
+  .addtask button{
+    position: relative;
+    width: 80px;
+    left: 0%;
+    top: 40%;
+  }
+  .container{
+    position: relative;
+    left: 10px;
+    width: 330px;
+  }
+  .listItem{
+    display: flex;
+  }
+  .listItem li{
+    font-size: 15px;
+    word-break: break-all;
+    margin-top: 30px;
+  }
+  .listItem h5{
+    font-size: 15px;
+  }
+  
+   .list{
+    position: relative;
+    padding: 0px;
+    margin: 0px;
+  }
+  .delete{
+    
+    right: -5px;
+    
+  }
+  h6{
+    position: absolute;
+    padding-top: 19px;
+    padding-left: 15px;
+  }
+  h5{
+  position: absolute;
+  right: 28px;
+  top: 10px;
+  font-size: 16px;
+  }
+
+  #addinput {
+  
+  max-height: 80px;
+  
+  }
+  
+
+
+
+}
 
 
 
