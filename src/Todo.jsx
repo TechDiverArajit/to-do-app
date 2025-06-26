@@ -1,11 +1,19 @@
-import React ,{useState} from "react"
+import React ,{use, useEffect, useState} from "react"
 const Todo = ()=>{
-    const [task , setTask] = useState([]);
+    const [task , setTask] = useState(()=>{
+        return JSON.parse(localStorage.getItem("todos"))||[];
+    });
     const [newTask , setNewTask] = useState();
     const [date , setDate] = useState();
     const [importance , setImportance] = useState("");
     const [classs , setClass] = useState([]);
 
+    useEffect(()=>{
+        localStorage.setItem("todos",JSON.stringify(task));
+    },[task])
+
+    
+    
     
 
     const addTask = ()=>{
@@ -15,7 +23,6 @@ const Todo = ()=>{
                         importanceLevel:importance}
             setTask(t => [...t , object]);
             }
-
     }
 
     const taskHandler = (e) =>{
@@ -69,6 +76,9 @@ const Todo = ()=>{
         }
         
     }
+     
+
+    
     
 
     return(
